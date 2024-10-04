@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+const roleRoute = require('./Routes/role.js')
 
 // Activate express
 const app = express();
@@ -19,6 +20,10 @@ const DataBase = async ()=>{
         throw error;
     }
 }
+
+// middlewares
+app.use(express.json())
+app.use('/api/role', roleRoute)
 
 // Server Connection
 app.listen(PORT, ()=>{
