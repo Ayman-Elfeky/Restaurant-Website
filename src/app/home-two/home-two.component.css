@@ -1,0 +1,57 @@
+:root {
+    --regular: 500;
+    --medium: 550;
+    --semiBold: 600;
+    --bold: 700;
+}
+
+/* start services */
+
+.services {
+    padding: 100px 0;
+}
+
+.services-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 200px;
+}
+
+.services-container h1 {
+    width: 50%;
+    font-weight: var(--medium);
+    font-size: 50px;
+    line-height: 55px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.card p {
+    color: #414536;
+    font-size: 14px;
+}
+
+.card p:nth-child(2) {
+    font-weight: var(--bold);
+    font-size: 20px;
+    color: #2C2F24;
+}
+
+/* end services */

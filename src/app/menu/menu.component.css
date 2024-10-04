@@ -1,0 +1,130 @@
+:root {
+    --regular: 500;
+    --medium: 550;
+    --semiBold: 600;
+    --bold: 700;
+}
+
+.buttons .active {
+    color: #fff;
+    background-color: #ad343e;
+}
+
+.menu-container {
+    width: 90%;
+    margin: auto;
+}
+
+.menu-text {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.menu-text h1{
+    padding: 20px 0 40px;
+    font-size: 90px;
+    font-weight: var(--regular);
+    color: #2C2F24;
+}
+
+.menu-text p {
+    margin: auto;
+    width: 460px;
+    font-size: 15px;
+    color: #495460;
+}
+
+.buttons {
+    width: 60%;
+    margin: auto;
+
+    /* using grid */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 120px;
+
+    /* using flex box */
+    /* padding: 0 0 80px;
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    justify-content: space-between;  */
+}
+
+.buttons button {
+    border: 1px solid #DBDFD0;
+    background-color: #fff;
+    color: #2C2F24;
+    font-weight: var(--bold);
+    border-radius: 20px;
+    /* using width and height */
+    width: 130px;
+    height: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: #fff;
+    background-color: #ad343e;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    margin: auto;
+
+    /* explain grid rows */
+    grid-template-rows: repeat(2, 500px);
+}
+
+.card {
+    width: 306px;
+    height: 428px;
+    text-align: center;
+    border: 1px solid #bec4af;
+    border-radius: 16px 16px 0 0;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card:nth-child(5) img {
+    width: 103%;     
+    margin-left: -4px;
+}
+
+/* 
+try to make it with two cases :
+    - with margin (without container)
+    - with container 
+ */
+
+/* with margin */
+.card p {
+    margin-top: 20px;
+}
+
+.card p:nth-child(2) {
+    font-weight: bold;
+    color: #ad343e;
+    font-size: 20px;
+}
+
+.card p:nth-child(3) {
+    font-weight: var(--bold);
+    font-size: 20px;
+    color: #2C2F24;
+}
+
+.card p:last-child {
+    color: #495460;
+    margin: 30px auto;
+    width: 90%;
+}

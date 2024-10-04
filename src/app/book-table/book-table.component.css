@@ -1,0 +1,81 @@
+:root {
+    --regular: 500;
+    --medium: 550;
+    --semiBold: 600;
+    --bold: 700;
+}
+
+.text {
+    text-align: center;
+    padding: 100px 0 150px;
+}
+
+.text h1 {
+    font-size: 70px;
+    color: #2C2F24;
+    font-weight: var(--regular)
+}
+
+.text p {
+    width: 35%;
+    margin: 40px auto auto auto;
+    font-size: 15px;
+    color: #495460;
+}
+
+.form {
+    background-image: url(/./image\ 112.png);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 55%;
+    margin-top: -300px;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+
+.form-group input {
+    border-radius: 10px;
+    border: 1px solid #495460;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group:nth-child(5) input {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+form button {
+    /* Make the button span both columns */
+    grid-column: span 2;
+    padding: 10px 15px; 
+    background-color: #AD343E; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #53191e;
+}

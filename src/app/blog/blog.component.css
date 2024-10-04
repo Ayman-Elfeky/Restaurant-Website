@@ -1,0 +1,75 @@
+:root {
+    --regular: 500;
+    --medium: 550;
+    --semiBold: 600;
+    --bold: 700;
+}
+
+.text {
+    text-align: center;
+    padding: 100px 0 80px;
+}
+
+.text h1 {
+    color: #2c2f24;
+    font-size: 80px;
+    font-weight: var(--regular);
+}
+
+.text p {
+    color: #414536;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.cards {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 0 100px;
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid #a6ac96;
+    width: 204px;
+    height: 330px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    object-fit: cover;
+    object-position: center;
+    width: 200px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.card p:nth-child(2),
+.card p:nth-child(4) {
+    color: #737865;
+    font-weight: var(--medium);
+    font-size: 12px;
+}
+
+.card p:nth-child(3) {
+    color: #2c2f24;
+    font-size: medium;
+    font-weight: var(--medium);
+}
+
+.card p:nth-child(4) {
+    margin-top: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card p:nth-child(4):hover {
+    color: black;
+    font-size: 12.5px;
+}

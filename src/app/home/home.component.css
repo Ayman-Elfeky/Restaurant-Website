@@ -1,0 +1,345 @@
+:root {
+    --regular: 500;
+    --medium: 550;
+    --semiBold: 600;
+    --bold: 700;
+}
+
+/* start of landing page */
+
+main {
+    background-image: url('/./bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-container h1 {
+    font-weight: var(--regular);
+    font-size: 80px;
+    width: 60%;
+    line-height: 80px;
+    margin: auto;
+}
+
+.main-container p {
+    font-size: 16px;
+    font-weight: var(--regular);
+    line-height: 25px;
+    width: 55%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.buttons button {
+    background-color: white;
+    color: #182226;
+    font-weight: var(--bold);
+    border-radius: 30px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: 2px solid #2C2F24;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #AD343E;
+    color: #fff;
+}
+
+.buttons button:focus {
+    background-color: #AD343E;
+    color: #fff;
+}
+
+/* Responsive Collection */
+
+/* For screens 700px or below */
+@media (max-width: 700px) {
+    .main-container h1 {
+        font-size: 50px;
+        width: 80%;
+        line-height: 60px;
+    }
+    
+    .main-container p {
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .buttons {
+        width: 60%;
+    }
+    
+    .buttons button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* For screens 500px and below */
+@media (max-width: 500px) {
+    .main-container h1 {
+        font-size: 30px;
+        width: 90%;
+        line-height: 40px;
+    }
+    
+    .main-container p {
+        font-size: 12px;
+        width: 90%;
+    }
+    
+    .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+
+/* end of landing page */
+
+/* start of browse menu seciton */
+.browser {
+    text-align: center;
+}
+
+.browser h1 {
+    font-weight: var(--medium);
+    padding: 50px 0 0;
+}
+
+.browser .cards {
+    padding: 50px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.cards .card {
+    border: 2px solid #DBDFD0;
+    border-radius: 10px;
+    padding: 10px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.cards .card img {
+    padding-top: 20px;
+    height: 110px;
+}
+
+.cards .card p:nth-child(2) {
+    font-weight: var(--bold);
+    font-size: 20px;
+}
+
+.cards .card p:nth-child(3) {
+    font-weight: var(--regular);
+    color: #414536;
+}
+
+.cards .card a {
+    text-decoration: none;
+    color: #AD343E;
+    font-weight: var(--bold);
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.cards .card a:hover {
+    color: #20221a;
+}
+/* end of browse menu seciton */
+
+/* start of about us section */
+.about-us {
+    padding: 100px 0;
+    background-color: #F9F9F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for the entire About Us section */
+.about-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+/* Column 1 (Image and Contact Card) */
+.col-1 {
+    width: 50%;
+}
+
+/* Image Container */
+.img-container {
+    background-image: url('/./aboutUs.png');
+    background-position: center;
+    background-size: cover;
+    width: 490px;
+    height: 430px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Contact Card */
+.contact {
+    background-color: #474747;
+    width: 350px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+}
+
+/* Text inside the Contact Card */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.contact-container > p {
+    color: #fff;
+    font-weight: var(--bold);
+    font-size: 19px;
+}
+
+.info {
+    padding-top: 20px;
+    color: #F9F9F7;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Column 2 (Text Content) */
+.col-2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.col-2 h1 {
+    font-weight: var(--medium);
+    font-size: 45px;
+    line-height: 55px;
+}
+
+.col-2 p:nth-child(2) {
+    color: #2C2F24;
+    font-weight: var(--medium);
+    font-size: 15px;
+}
+
+.col-2 p:nth-child(3) {
+    color: #414536;
+    font-size: 13px;
+    font-weight: var(--regular);
+}
+
+.col-2 button {
+    width: 170px;
+    padding: 20px 0;
+    border: 1px solid #2C2F24;
+    background-color: #fff;
+    border-radius: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.col-2 button:hover {
+    background-color: #AD343E;
+    color: #fff;
+}
+
+
+/* Responsive collection */
+
+/* For screens 700px or below */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the columns vertically */
+        gap: 100px;
+        align-items: center; /* Center align items */
+    }
+
+    .col-1, .col-2 {
+        width: 100%; /* Make both columns take full width */
+    }
+
+    .col-2 h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+
+/* Mobile Devices (width 480px and below) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    .img-container {
+        width: 100%;   
+    }
+
+    .contact {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .col-2 h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .col-2 p {
+        font-size: 14px;
+    }
+
+    .col-2 button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+/* end of about us section*/
