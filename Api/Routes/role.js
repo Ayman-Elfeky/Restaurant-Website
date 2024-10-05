@@ -1,21 +1,19 @@
 const express = require('express');
-const role = require('../Models/role.js');
+const { updateRole, createRole, getAllRoles, deleteRole } = require('../Controllers/role.controller.js');
 
 // Create CRUD operations
 const router = express.Router();
 
-router.post('/create', async (req, res, next)=>{
-    try {
-        if(req.body.role && req.body.role !== '') {
-            const newRole = new role(req.body);
-            await newRole.save();
-            res.send('Role added')
-        }else{
-            res.status(400).send('Bad Request')
-        }
-    } catch (error) {
-        res.status(500).send('Internal Server Error')
-    }
-})
+// Create a new role in DB
+router.post('/create', createRole);  
 
-module.exports = router;
+// Update a role in DB
+router.put('/update/:id', updateRole);
+
+// Get all roles from DB
+router.get('/getAll', getAllRoles);
+
+// Delete a role
+router.delete('/delete/:id', deleteRole);
+
+module.exports = router; 

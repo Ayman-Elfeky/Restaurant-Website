@@ -1,4 +1,3 @@
-const { RequiredValidator } = require('@angular/forms')
 const mongoose = require('mongoose')
 const { Schema } = require('mongoose')
 
