@@ -6,9 +6,13 @@ import { MenuComponent } from './menu/menu.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BookTableComponent } from './book-table/book-table.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
-    {path: '', component: HomeComponent},
+    {path: '', component: LoginComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'menu', component: MenuComponent},

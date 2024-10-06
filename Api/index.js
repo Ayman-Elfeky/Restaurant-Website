@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
 const roleRoute = require('./Routes/role.js')
 const authRoute = require('./Routes/auth.js')
 const userRoute = require('./Routes/user.js')
@@ -28,11 +29,15 @@ const DataBase = async ()=>{
 
 
 // middlewares
-app.use(express.json())
-app.use(cookieParser())
-app.use('/api/role', roleRoute)
-app.use('/api/auth', authRoute)
-app.use('/api/user', userRoute) 
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors({
+    origin: 'http://localhost:4200',
+    credentials: true
+}));
+app.use('/api/role', roleRoute);
+app.use('/api/auth', authRoute);
+app.use('/api/user', userRoute); 
 
 // Response handler Middleware  (success and error)
 app.use((obj, req, res, next) => {
