@@ -28,14 +28,20 @@
                 <h1>Bistro Bliss</h1>
             </div>
 
-            <div class="nav-list">
+            <div *ngIf="!isLoggedIn" class="nav-list-temp">
+                <a routerLink="/register" routerLinkActive="active">Register</a>
+                <a routerLink="/login" routerLinkActive="active">Login</a>
+            </div>
+
+            <div *ngIf="isLoggedIn" class="nav-list">
                 <a routerLink="/home" routerLinkActive="active">Home</a>
                 <a routerLink="/about" routerLinkActive="active">About</a>
                 <a routerLink="/menu" routerLinkActive="active">Menu</a>
                 <a routerLink="/blog" routerLinkActive="active">blog</a>
                 <a routerLink="/contact" routerLinkActive="active">Contact</a>
             </div>
-            <button routerLink="/booktable">Book A Table</button>
+            <button *ngIf="isLoggedIn" routerLink="/booktable">Book A Table</button>
+            <button *ngIf="isLoggedIn" (click)="logout()" class="logout">Logout</button>
             <!-- menu bar when responsive -->
             <img src="" alt="">
         </div>

@@ -1,56 +1,16 @@
 <div class="blog">
     <div class="text">
-        <h1>Our Blog & Articles</h1>
-        <p>We consider all the drivers of change gives you the components you need <br> to change to create a truly happens</p>
+      <h1>Our Blog & Articles</h1>
+      <p>We consider all the drivers of change gives you the components you need <br> to change to create a truly happens</p>
     </div>
+    
     <div class="cards">
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div> 
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
-        <div class="card">
-            <img src="/./blog.png" alt="">
-            <p>January 3, 2024</p>
-            <p>How to prepare a free gluten sushi</p>
-            <p>Read More</p>
-        </div>
+      <div class="card" *ngFor="let recipe of recipes">
+        <img src="/./blog.png" alt="">
+        <p>{{ recipe.createdAt | date:'longDate' }}</p> <!-- Display the date -->
+        <p>How to prepare {{ recipe.title }}</p> <!-- Display the recipe title -->
+        <p (click)="viewRecipe(recipe._id)" class="read-more">Read More</p> <!-- Navigate to blog details -->
+      </div>
     </div>
-</div>
+  </div>
+  

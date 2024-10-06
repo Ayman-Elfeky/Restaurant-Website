@@ -1,0 +1,165 @@
+[
+    {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 large eggs",
+        "50g pecorino cheese",
+        "50g parmesan cheese",
+        "Freshly ground black pepper",
+        "Salt"
+    ],
+    "preparation": [
+        "Boil the pasta in salted water according to the package instructions.",
+        "Meanwhile, fry the pancetta in a pan until crispy.",
+        "In a bowl, beat the eggs and mix with grated pecorino and parmesan cheese.",
+        "Once the pasta is cooked, reserve some pasta water and drain the rest.",
+        "Quickly toss the hot pasta with the pancetta and remove from heat.",
+        "Add the egg and cheese mixture, stirring rapidly. If the mixture is too thick, add some reserved pasta water to create a creamy sauce.",
+        "Serve with a sprinkle of black pepper and extra cheese on top."
+    ],
+    "category": "Italian",
+    "prep_time": "10 minutes",
+    "cook_time": "15 minutes",
+    "servings": 2
+    },
+    {
+    "id": 2,
+    "title": "Classic Beef Burger",
+    "description": "A juicy, flavorful beef burger with your favorite toppings.",
+    "ingredients": [
+        "500g ground beef",
+        "4 burger buns",
+        "1 onion, finely chopped",
+        "Lettuce leaves",
+        "Tomato slices",
+        "Cheddar cheese slices",
+        "Salt and pepper",
+        "Ketchup and mustard"
+    ],
+    "preparation": [
+        "Mix the ground beef with salt, pepper, and chopped onions. Form into four patties.",
+        "Grill the patties over medium heat until they reach your preferred doneness.",
+        "Toast the burger buns lightly on the grill.",
+        "Assemble the burger with lettuce, tomato slices, cheese, and the cooked beef patty.",
+        "Top with ketchup and mustard before serving."
+    ],
+    "category": "American",
+    "prep_time": "10 minutes",
+    "cook_time": "10 minutes",
+    "servings": 4
+    },
+    {
+    "id": 3,
+    "title": "Chicken Curry",
+    "description": "A flavorful and spicy Indian-style chicken curry with aromatic spices.",
+    "ingredients": [
+        "500g chicken breast, cubed",
+        "1 onion, chopped",
+        "3 garlic cloves, minced",
+        "1 tbsp ginger, minced",
+        "2 tbsp curry powder",
+        "1 can coconut milk",
+        "1 cup chicken broth",
+        "2 tbsp vegetable oil",
+        "Salt and pepper",
+        "Fresh cilantro for garnish"
+    ],
+    "preparation": [
+        "Heat the oil in a large pan and sauté onions until golden.",
+        "Add garlic and ginger and cook for 1-2 minutes.",
+        "Stir in the curry powder and cook for 1 minute to release the flavors.",
+        "Add the chicken and cook until it's no longer pink.",
+        "Pour in the coconut milk and chicken broth, and bring to a simmer.",
+        "Cook for 15-20 minutes, until the chicken is fully cooked and the sauce has thickened.",
+        "Season with salt and pepper to taste, and garnish with fresh cilantro."
+    ],
+    "category": "Indian",
+    "prep_time": "15 minutes",
+    "cook_time": "25 minutes",
+    "servings": 4
+    },
+    {
+    "id": 4,
+    "title": "Avocado Toast",
+    "description": "A simple and delicious toast topped with mashed avocado, perfect for breakfast or a snack.",
+    "ingredients": [
+        "1 ripe avocado",
+        "2 slices of whole grain bread",
+        "1 tsp lemon juice",
+        "Salt and pepper",
+        "Chili flakes (optional)",
+        "Olive oil"
+    ],
+    "preparation": [
+        "Toast the bread slices to your desired crispiness.",
+        "Mash the avocado in a bowl with lemon juice, salt, and pepper.",
+        "Spread the mashed avocado over the toast.",
+        "Drizzle with a bit of olive oil and sprinkle chili flakes if desired."
+    ],
+    "category": "Breakfast",
+    "prep_time": "5 minutes",
+    "cook_time": "5 minutes",
+    "servings": 1
+    },
+    {
+    "id": 5,
+    "title": "Vegetable Stir-Fry",
+    "description": "A quick and healthy stir-fry packed with fresh vegetables and a savory sauce.",
+    "ingredients": [
+        "1 cup broccoli florets",
+        "1 bell pepper, sliced",
+        "1 carrot, sliced",
+        "1 zucchini, sliced",
+        "2 tbsp soy sauce",
+        "1 tbsp sesame oil",
+        "2 garlic cloves, minced",
+        "1 tsp ginger, minced",
+        "1 tbsp sesame seeds",
+        "Cooked rice (for serving)"
+    ],
+    "preparation": [
+        "Heat the sesame oil in a large pan or wok over medium heat.",
+        "Add garlic and ginger, and sauté for 1 minute.",
+        "Add the vegetables and stir-fry for 5-7 minutes until tender-crisp.",
+        "Pour in the soy sauce and toss to coat the vegetables evenly.",
+        "Serve the stir-fried vegetables over cooked rice and garnish with sesame seeds."
+    ],
+    "category": "Asian",
+    "prep_time": "10 minutes",
+    "cook_time": "10 minutes",
+    "servings": 2
+    },
+    {
+    "id": 6,
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic, chewy chocolate chip cookies that everyone loves.",
+    "ingredients": [
+        "1 cup butter, softened",
+        "1 cup white sugar",
+        "1 cup brown sugar",
+        "2 large eggs",
+        "2 tsp vanilla extract",
+        "3 cups all-purpose flour",
+        "1 tsp baking soda",
+        "1/2 tsp salt",
+        "2 cups chocolate chips"
+    ],
+    "preparation": [
+        "Preheat the oven to 180°C (350°F).",
+        "In a bowl, cream together butter, white sugar, and brown sugar until smooth.",
+        "Beat in the eggs one at a time, then stir in the vanilla extract.",
+        "Combine the flour, baking soda, and salt; gradually add to the creamed mixture.",
+        "Stir in the chocolate chips.",
+        "Drop spoonfuls of dough onto an ungreased baking sheet.",
+        "Bake for 10-12 minutes until edges are golden. Let the cookies cool on the sheet for a few minutes before transferring them to a wire rack."
+    ],
+    "category": "Dessert",
+    "prep_time": "15 minutes",
+    "cook_time": "12 minutes",
+    "servings": 24
+    }
+]

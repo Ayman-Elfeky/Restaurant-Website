@@ -26,7 +26,7 @@
     display: grid;
     width: 80%;
     margin: auto;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 0 100px;
     gap: 20px;
 }
@@ -64,12 +64,12 @@
 }
 
 .card p:nth-child(4) {
-    margin-top: 35px;
+    margin-top: 50px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .card p:nth-child(4):hover {
     color: black;
-    font-size: 12.5px;
+    text-decoration: underline;
 }

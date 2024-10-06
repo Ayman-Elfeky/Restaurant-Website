@@ -1,1 +1,36 @@
-<p>blog-details works!</p>
+<div class="recipe-details">
+    <div class="recipe-header">
+      <h1>{{ recipe.title }}</h1>
+      <p>{{ recipe.description }}</p>
+    </div>
+  
+    <div class="recipe-info">
+      <div class="recipe-meta">
+        <p><strong>Category:</strong> {{ recipe.category }}</p>
+        <p><strong>Preparation Time:</strong> {{ recipe.prep_time }}</p>
+        <p><strong>Cook Time:</strong> {{ recipe.cook_time }}</p>
+        <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+      </div>
+    </div>
+  
+    <div class="recipe-ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient }}
+        </li>
+      </ul>
+    </div>
+  
+    <div class="recipe-preparation">
+      <h2>Preparation Steps</h2>
+      <ol>
+        <li *ngFor="let step of recipe.preparation">
+          {{ step }}
+        </li>
+      </ol>
+    </div>
+  
+    <button class="back-button" (click)="goBack()">Back to Recipes</button>
+  </div>
+  

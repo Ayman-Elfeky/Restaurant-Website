@@ -24,11 +24,11 @@ footer {
 .upper {
     padding-top: 50px;
     display: flex;
-    justify-content: space-between;
-    width: fit-content;
+    /* justify-content: space-between; */
+    /* width: fit-content; */
     margin: auto;
-    gap: 150px;
-    flex-wrap: wrap;
+    gap: 100px;
+    /* flex-wrap: wrap; */
 }
 
 /* column 1 */
@@ -114,6 +114,10 @@ footer {
 
 
 /* column 3 */
+/* 
+.col-3 {
+    width: 50%;
+} */
 
 .col-3 p {
     color: #fff;

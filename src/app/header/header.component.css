@@ -23,7 +23,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* background-color: red; */
     width: 40%;
     padding-left: 100px;
 }
@@ -84,6 +83,8 @@ nav {
     gap: 10px;
 }
 
+/* when logged in */
+
 .nav-list {
     margin: auto;
     display: flex;
@@ -101,6 +102,29 @@ nav {
 }
 
 .nav-list a:hover {
+    background-color: #DBDFD0;
+}
+
+/* when logged out */
+
+.nav-list-temp {
+    margin: auto auto auto 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 400px;
+}
+
+.nav-list-temp a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 16px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+
+.nav-list-temp a:hover {
     background-color: #DBDFD0;
 }
 
@@ -127,8 +151,26 @@ instead of routerLinkAcitve
     cursor: pointer;
 }
 
+.nav-container .logout {
+    background-color: white;
+    color: #182226;
+    font-weight: var(--bold);
+    border-radius: 30px;
+    padding: 15px 7px;
+    font-size: 16px;
+    border: 2px solid #000;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
 .nav-container button:hover {
-    background-color: #AD343E;
+    background-color: #ad343e;
+    color: #fff;
+}
+
+.nav-container .logout:hover {
+    background-color: #0a0a0a;
     color: #fff;
 }
 
@@ -137,7 +179,14 @@ instead of routerLinkAcitve
 /* Responsive Collection */
 
 /* For screens 700px or below */
-@media (max-width: 700px) {
+
+/* @media (max-width: 816px) {
+    .nav-list-temp {
+        margin: auto;
+    }
+} */
+
+@media (max-width: 890px) {
     header {
     background-color: #474747;
     display: flex;
@@ -186,6 +235,10 @@ instead of routerLinkAcitve
     .nav-container button {
         display: none;
     }
+
+    .nav-list-temp {
+        margin: auto;
+    }
 }
 
 /* For screens 500px or below */
@@ -197,5 +250,10 @@ instead of routerLinkAcitve
 
     .social {
         padding-right: 20px;
+    }
+
+    .nav-list-temp {
+        margin: auto;
+        padding-right: 10px;
     }
 }
