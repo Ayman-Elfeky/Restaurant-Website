@@ -11,25 +11,27 @@ description: {
 },
 ingredients: {
     type: [String], // Array of strings for the ingredients
-    required: true
+    required: false
 },
 preparation: {
     type: [String], // Array of steps for preparation
-    required: true
+    required: false
 },
 category: {
     type: String,
-    required: true  },  prep_time: {
+    required: false
+},
+prep_time: {
     type: String,
-    required: true
+    required: false
 },
 cook_time: {
     type: String,
-    required: true
+    required: false
 },
 servings: {
     type: Number,
-    required: true
+    required: false
 },
 createdAt: { // Adding createdAt field
     type: Date,

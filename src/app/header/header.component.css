@@ -174,6 +174,16 @@ instead of routerLinkAcitve
     color: #fff;
 }
 
+/* responsive bar */
+
+.res-bar {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
 /* end nav section */
 
 /* Responsive Collection */
@@ -239,6 +249,72 @@ instead of routerLinkAcitve
     .nav-list-temp {
         margin: auto;
     }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .res-bar {
+        display: block; 
+        width: 50px; 
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .res-bar:hover {
+        transform: scale(1.05);
+    }
+    
+    .sidebar {
+        z-index: 999; 
+        width: 300px; 
+        display: none; 
+        align-items: center;
+        justify-content: center; 
+        background-color: #ad343e; 
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        font-size: 20px; 
+        font-weight: var(--medium); 
+        width: 400px; 
+        list-style-type: none; 
+        margin: 450px 0 100px; 
+        color: aliceblue; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 50px;
+    }
+    
+    .sidebar ul li {
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 10px 0;
+    }
+    
+    .sidebar ul button {
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+    
+    .sidebar ul button:hover {
+        background-color: #4e4e4e;
+    }
+
+    .sidebar ul li:nth-child(2) {
+        background-color: #ad343e;
+    }
+    
+    .sidebar ul li:hover {
+        background-color: #DBDFD0;
+        color: black;
+    }
 }
 
 /* For screens 500px or below */
@@ -255,5 +331,11 @@ instead of routerLinkAcitve
     .nav-list-temp {
         margin: auto;
         padding-right: 10px;
+    }
+
+    .res-bar {
+        display: block; 
+        width: 50px; 
+        height: 50px;
     }
 }

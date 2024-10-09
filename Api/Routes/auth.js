@@ -4,12 +4,12 @@ const { register, login, registerAdmin } = require('../Controllers/auth.controll
 const router = express.Router()
 
 // Register
-router.post('/register', register)
+router.post('/register', register);
 
 // Login
-router.post('/login', login)
+router.post('/login', login);
 
 // Register as Admin
-router.post('/register-admin', registerAdmin)
+router.post('/register-admin', registerAdmin);
 
 module.exports = router;

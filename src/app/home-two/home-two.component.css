@@ -27,8 +27,9 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(270px, 1fr));
     gap: 40px;
+    margin-left: -40px;
 }
 
 .card {
@@ -55,3 +56,28 @@
 }
 
 /* end services */
+
+/* responsive collection */
+
+@media(max-width: 780px){
+    .services-container h1 {
+        width: 90%;
+        margin-left: -30px;
+        font-size: 40px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(270px, 1fr));
+        gap: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+    }
+}

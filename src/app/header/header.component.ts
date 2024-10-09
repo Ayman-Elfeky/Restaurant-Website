@@ -21,4 +21,34 @@ export class HeaderComponent {
       window.location.reload()
     })
   }
+
+  // sideBar = document.querySelector('.sidebar') as HTMLElement;
+  // resBar = document.querySelector('.res-bar') as HTMLElement;
+
+  mediaQuery = window.matchMedia('(max-width: 890px)');
+  
+  showSideBar = ()=> {
+    const sideBar = document.querySelector('.sidebar') as HTMLElement;
+    const resBar = document.querySelector('.res-bar') as HTMLElement;
+    if(this.mediaQuery.matches){
+      resBar.style.display = 'none';
+      sideBar.style.display = 'flex';
+    }else{
+      resBar.style.display = 'none';
+      sideBar.style.display = 'none';
+    }
+  }
+
+  hideSideBar = ()=> {
+    const sideBar = document.querySelector('.sidebar') as HTMLElement;
+    const resBar = document.querySelector('.res-bar') as HTMLElement;
+    if(this.mediaQuery.matches){
+    resBar.style.display = 'block';
+    sideBar.style.display = 'none';
+    }else{
+      // resBar.style.display = 'none';
+      // sideBar.style.display = 'none';
+    }
+  }
+
 }

@@ -73,3 +73,13 @@
     color: black;
     text-decoration: underline;
 }
+
+@media (max-width: 960px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text h1 {
+        line-height: 100px;
+    }
+}

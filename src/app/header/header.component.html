@@ -43,7 +43,19 @@
             <button *ngIf="isLoggedIn" routerLink="/booktable">Book A Table</button>
             <button *ngIf="isLoggedIn" (click)="logout()" class="logout">Logout</button>
             <!-- menu bar when responsive -->
-            <img src="" alt="">
+            <img (click)="showSideBar()" class="res-bar" src="/./menu.webp" alt="">
+
+            <aside class="sidebar">
+                <ul>
+                    <button (click)="hideSideBar()">Back</button>
+                    <li routerLink="/home" routerLinkActive="active">Home</li>
+                    <li routerLink="/about" routerLinkActive="active">About</li>
+                    <li routerLink="/menu" routerLinkActive="active">Menu</li>
+                    <li routerLink="/blog" routerLinkActive="active">blog</li>
+                    <li routerLink="/contact" routerLinkActive="active">Contact</li>
+                </ul>
+            </aside>
+
         </div>
     </nav>
 </div>
