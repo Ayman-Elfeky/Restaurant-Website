@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     .subscribe({
       next:(res)=>{
         console.log(this.registerForm.value) 
-        alert("user Created Succefully!");  
+        alert("user Created successfully!");  
         // Reset form values after submissions
         this.registerForm.reset();  
         this.router.navigate(['/login']);

@@ -23,6 +23,7 @@ export class BlogComponent implements OnInit {
   fb = inject(FormBuilder);  // Injecting FormBuilder
   authService = inject(AuthService)  
   registerForm!: FormGroup;  // FormGroup declaration
+  isAdmin: boolean = this.authService.isAdmin();
 
   ngOnInit(): void {
     this.getReceipes();
@@ -55,6 +56,7 @@ export class BlogComponent implements OnInit {
     this.receipeService.postRecipe(this.registerForm.value)
     .subscribe({
       next: (res) => {
+        alert('Recipe created successfully');
         console.log('Recipe created successfully', res);
         this.getReceipes(); // Refresh the list after creating
       },
@@ -89,10 +91,12 @@ export class BlogComponent implements OnInit {
     this.receipeService.putRecipe(this.editingRecipeId, updatedData).subscribe({
       next: (res) => {
         console.log('Recipe updated successfully', res);
+        alert('Recipe Updated Successfully');
         this.getReceipes(); // Refresh the list after update
         this.cancelEditing(); // Hide the edit form after updating
       },
       error: (err) => {
+        console.log('The Error is here')
         console.error('Error updating recipe', err);
       }
     });
@@ -102,6 +106,7 @@ export class BlogComponent implements OnInit {
     this.receipeService.deleteRecipe(id).subscribe({
       next: (res) => {
         console.log('Recipe deleted successfully', res);
+        alert('Recipe deleted successfully');
         this.getReceipes(); // Refresh the list after deletion
       },
       error: (err) => {

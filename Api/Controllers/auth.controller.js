@@ -31,7 +31,7 @@ const register = async (req, res, next)=> {
             await newUser.save();
             next(createSuccess(200, 'User Registered Successfully'))
     } catch (error) {
-        next(createError(500, 'Somtehing went wrong!'))
+        next(createError(500, error))
     }
 }
 
@@ -87,7 +87,7 @@ const login = async (req, res, next)=> {
             })
         }
     } catch (error) {
-        next(createError(500, 'Internal Server Error'))
+        next(createError(500, error))
     }
 }
 

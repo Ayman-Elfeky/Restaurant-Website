@@ -20,7 +20,7 @@ export class LoginComponent {
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],  // Removed 'compose', as it's not necessary
-      password: ['', Validators.required]
+      password: ['', Validators.required],
       // confirmPassword: ['', Validators.required]
     });
   }
@@ -30,7 +30,8 @@ export class LoginComponent {
     .subscribe({
       next:(res)=>{
         alert('login successfully');
-        localStorage.setItem('user_id',res.data._id)
+        localStorage.setItem('user_id',res.data._id);
+        localStorage.setItem('isAdmin',res.data.isAdmin);
         this.router.navigate(['/home']).then(()=>{
           window.location.reload()
         })

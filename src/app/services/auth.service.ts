@@ -21,5 +21,8 @@ export class AuthService {
     return !!localStorage.getItem('user_id');
   }
 
-
+  isAdmin(){
+    const isAdmin = localStorage.getItem('isAdmin');
+    return isAdmin === 'true';
+  }
 }

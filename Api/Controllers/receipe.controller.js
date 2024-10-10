@@ -24,8 +24,8 @@ const getReceipesById = async (req, res, next) => {
   }
 
   const createRecipe = async (req, res, next)=> {
-  console.log('Creating recipe');
-  console.log(req.body);
+  // console.log('Creating recipe');
+  // console.log(req.body);
     try {
       const newRecipe = new Receipe({
         title: req.body.title,
@@ -46,7 +46,6 @@ const getReceipesById = async (req, res, next) => {
   }
 
   const updateRecipe = async (req, res, next)=> {
-    console.log(req.params.id)
     try {
       const recipe = await Receipe.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
@@ -74,5 +73,6 @@ module.exports = {
     getReceipes,
     getReceipesById,
     createRecipe,
-    deleteRecipe
+    deleteRecipe,
+    updateRecipe
 };

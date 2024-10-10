@@ -1,5 +1,5 @@
 const express = require('express');
-const { getReceipes, getReceipesById, createRecipe, deleteRecipe,  } = require('../Controllers/receipe.controller');
+const { getReceipes, getReceipesById, createRecipe, deleteRecipe, updateRecipe,  } = require('../Controllers/receipe.controller');
 
 const router = express.Router()
 
@@ -14,7 +14,7 @@ router.get('/', getReceipes);
 router.get('/:id', getReceipesById);
 
 // Update a recipe (UPDATE)
-router.put('/:id', upda)
+router.patch('/:id', updateRecipe)
 
 // Delete a recipe
 router.delete('/:id', deleteRecipe);

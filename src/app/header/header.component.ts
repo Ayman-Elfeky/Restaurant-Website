@@ -17,6 +17,7 @@ export class HeaderComponent {
 
   logout(){
     localStorage.removeItem('user_id');
+    localStorage.removeItem('isAdmin');
     this.router.navigate(['/login']).then(()=>{
       window.location.reload()
     })

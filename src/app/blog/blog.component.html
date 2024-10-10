@@ -5,18 +5,18 @@
   </div>
 
   <!-- New Recipe Form -->
-  <div style="margin-bottom: 20px; border: 1px solid #ccc; padding: 16px; border-radius: 8px; background-color: #f9f9f9;">
+  <div *ngIf="isAdmin" class="create">
     <h3>Create New Recipe</h3>
     <form [formGroup]="registerForm" (ngSubmit)="createRecipe()">
-      <input formControlName="title" placeholder="Title" name="title" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <textarea formControlName="description" placeholder="Description" name="description" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
-      <input formControlName="ingredients" placeholder="Ingredients" name="ingredients" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <input formControlName="preparation" placeholder="Preparation" name="preparation" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <input formControlName="category" placeholder="Category" name="category" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <input formControlName="servings" placeholder="Servings" name="servings" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <input formControlName="cook_time" placeholder="Cook Time" name="cook_time" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <input formControlName="prep_time" placeholder="Prep time" name="prep_time" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-      <button type="submit" style="background-color: #28a745; color: #fff; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">Create Recipe</button>
+      <input formControlName="title" placeholder="Title" name="title" required>
+      <textarea formControlName="description" placeholder="Description" name="description" required></textarea>
+      <input formControlName="ingredients" placeholder="Ingredients" name="ingredients" required>
+      <input formControlName="preparation" placeholder="Preparation" name="preparation" required>
+      <input formControlName="category" placeholder="Category" name="category" required>
+      <input formControlName="servings" placeholder="Servings" name="servings" required>
+      <input formControlName="cook_time" placeholder="Cook Time" name="cook_time" required>
+      <input formControlName="prep_time" placeholder="Prep time" name="prep_time" required>
+      <button type="submit">Create Recipe</button>
     </form>
   </div>
 
@@ -28,17 +28,17 @@
       <p (click)="viewRecipe(recipe._id)" class="read-more">Read More</p> <!-- Navigate to blog details -->
 
       <!-- Add the edit and delete buttons -->
-      <button (click)="startEditing(recipe)" style="background-color: #007bff; color: #fff; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px; margin-right: 8px;">Edit</button>
-      <button (click)="deleteRecipe(recipe._id)" style="background-color: #dc3545; color: #fff; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">Delete</button>
+      <button *ngIf="isAdmin" class="edit-btn" (click)="startEditing(recipe)">Edit</button>
+      <button *ngIf="isAdmin" class="delete-btn" (click)="deleteRecipe(recipe._id)">Delete</button>
 
       <!-- Display the edit form only for the selected recipe -->
-      <div *ngIf="recipe._id === editingRecipeId" style=" z-index: 999;  margin-top: 16px; border: 1px solid #ccc; padding: 16px; border-radius: 8px; background-color: red;">
-        <h3 style="margin-bottom: 12px;">Edit Recipe</h3>
+      <div class="edit-section" *ngIf="recipe._id === editingRecipeId">
+        <h3>Edit Recipe</h3>
         <form (ngSubmit)="updateRecipe()">
-          <input [(ngModel)]="updatedTitle" placeholder="New title" name="title" required style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;">
-          <textarea [(ngModel)]="updatedDescription" placeholder="New description" name="description" style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
-          <button type="submit" style=" cursor: pointer; background-color: #28a745; color: #fff; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px; margin-right: 8px;">Save</button>
-          <button type="button" (click)="cancelEditing()" style=" cursor: pointer; background-color: #6c757d; color: #fff; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">Cancel</button>
+          <input [(ngModel)]="updatedTitle" placeholder="New title" name="title" required>
+          <textarea [(ngModel)]="updatedDescription" placeholder="New description" name="description"></textarea>
+          <button type="submit">Save</button>
+          <button type="button" (click)="cancelEditing()">Cancel</button>
         </form>
       </div>
     </div>
