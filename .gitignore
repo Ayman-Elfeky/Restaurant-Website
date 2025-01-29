@@ -1,5 +1,3 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Compiled output
 /dist
 /tmp
@@ -10,6 +8,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+Api/node_modules/
 
 # IDEs and editors
 .idea/
