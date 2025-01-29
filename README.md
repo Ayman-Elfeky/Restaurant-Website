@@ -26,7 +26,7 @@ Ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/Ayman-Elfeky/Restaurant-Website.git]
+git clone https://github.com/Ayman-Elfeky/Restaurant-Website.git
 cd your-project-folder
 ```
 
