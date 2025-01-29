@@ -1,27 +1,95 @@
-# RestaurantWebsite
+# Restaurant Management System (MEAN Stack)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+This is a full-stack restaurant management system built using the **MEAN Stack** (MongoDB, Express.js, Angular, Node.js). It includes user authentication, product management, an admin panel, and a blog section.
 
-## Development server
+## Features
+- User authentication (Register/Login)
+- Recipe/Product display (Fetching from Database)
+- Admin panel with CRUD operations
+- Blog section with recipe details
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshots
 
-## Code scaffolding
+### Login Page
+![Login Page](public/login.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Home Page
+![Home Page](public/home.png)
 
-## Build
+## Installation and Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (Latest LTS Version)
+- [MongoDB](https://www.mongodb.com/try/download/community) (or use MongoDB Atlas)
+- [Angular CLI](https://angular.io/cli)
 
-## Running unit tests
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/Ayman-Elfeky/Restaurant-Website.git]
+cd your-project-folder
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 2. Install Dependencies
+Navigate to the frontend (Angular) and backend (API) folders and install the required dependencies.
 
-## Running end-to-end tests
+#### Frontend:
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Backend:
+```bash
+cd Api
+npm install
+```
 
-## Further help
+### 3. Configure the Database
+Ensure MongoDB is running on your system.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Local Database:** Start MongoDB on your machine:
+  ```bash
+  mongod --dbpath "C:\data\db"
+  ```
+  Then create the database in MongoDB shell:
+  ```bash
+  mongo
+  use restaurantDB
+  ```
+
+- **Cloud Database (MongoDB Atlas):**  
+  - Create an account at [MongoDB Atlas](https://www.mongodb.com/atlas).
+  - Get your **MongoDB connection string** and update the `.env` file inside the `Api` folder:
+    ```
+    MONGO_URI=your_mongodb_connection_string
+    ```
+
+### 4. Run the Project
+
+#### Start the Backend (Node.js + Express.js)
+```bash
+cd Api
+node index.js
+```
+The server will start at `http://localhost:5000/`
+
+#### Start the Frontend (Angular)
+```bash
+ng serve
+```
+The application will be available at `http://localhost:4200/`
+
+### 5. Admin Access
+There is only **one admin account** available in the database. You can check it inside the `Api` folder or manually create an admin user.
+
+## Technologies Used
+- **MongoDB** - NoSQL Database
+- **Express.js** - Backend Framework
+- **Angular** - Frontend Framework
+- **Node.js** - JavaScript Runtime
+- **JWT** - Authentication
+- **Mongoose** - ODM for MongoDB
+- **Bootstrap** - UI Styling
+
+## Contributing
+Feel free to submit issues or pull requests.
